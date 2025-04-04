@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "HOST=0.0.0.0 nuxt dev",
+    "dev": "cross-env HOST=0.0.0.0 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "node dist/server/index.mjs"
   },
   "dependencies": {
     "nuxt": "^3.16.2",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@types/pdf-parse": "^1.1.4",
-    "@nuxtjs/google-fonts": "^3.1.3"
+    "@nuxtjs/google-fonts": "^3.1.3",
+    "cross-env": "^7.0.3"
   }
 }
